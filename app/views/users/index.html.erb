@@ -1,0 +1,10 @@
+<h1>View our current exclusive members.</h1>
+
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <%= user.name %><br>
+      <%= user.member_status%><br>
+    </li>
+  <% end %>
+</ul>

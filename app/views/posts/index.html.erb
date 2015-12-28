@@ -1,0 +1,13 @@
+<h1>Posts from All the Members</h1>
+
+<% @posts.each do |post| %>
+  <p>
+    <%= link_to "#{post.title}", post_path(post) %><br>
+    <% if current_user.member_status %>
+      <%= post.user.name %><br>
+    <% else %>
+      Names withheld from non-members.<br>
+    <% end %>
+    <%= post.content %>
+  </p>
+<% end %>

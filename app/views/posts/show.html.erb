@@ -1,0 +1,11 @@
+<h1><%= @post.title %></h1>
+
+<% if current_user.member_status %>
+  <h3><%= @post.user.name %></h3>
+<% else %>
+  <h3>Names withheld from non-members.</h3>
+<% end %>
+
+<article>
+  <%= @post.content %>
+</article>
